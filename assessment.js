@@ -45,13 +45,19 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly(arr) {
   var evensArray = [];
-  for(i=0;i<arr.length;i++) {
+  // for(i=0;i<arr.length;i++) {
+  //   if(arr[i] % 2 === 0) {
+  //     evensArray.push(arr[i]);
+  //   }
+  // }
+  arr.forEach(function(num, i){
     if(arr[i] % 2 === 0) {
-      evensArray.push(arr[i]);
+      evensArray.push(num);
     }
-  }
+  });
   return evensArray;
 }
+console.log(evensOnly(myNumbers));
 
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
 // CODE HERE
