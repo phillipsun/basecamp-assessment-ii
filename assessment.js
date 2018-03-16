@@ -75,9 +75,11 @@ var trueFriends = peopleIknow.filter(i => i.friend === true);
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
 function indexFinder(arr) {
   var indexes = [];
-  for(i=0;i<arr.length;i++) {
-    indexes.push(arr.indexOf(arr[i]));
-  }
+  // for(i=0;i<arr.length;i++) {
+  //   indexes.push(arr.indexOf(arr[i]));
+  // }
+
+  arr.forEach((val,i)=>indexes.push(i));
   return indexes;
 }
 console.log(indexFinder(randomNumbers));
